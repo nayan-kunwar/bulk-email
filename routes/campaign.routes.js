@@ -14,7 +14,6 @@ router.post("/send-bulk", async (req, res) => {
     name: "send-email",
     data: { email, subject, html },
   }));
-  console.log(jobs);
 
   await emailQueue.addBulk(jobs);
 
